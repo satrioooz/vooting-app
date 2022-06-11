@@ -7,8 +7,8 @@ import { useContext, useState } from "react";
 import { AuthContext } from "./Context/AuthContext";
 function App() {
   const { auth } = useContext(AuthContext);
+  const login = localStorage.getItem("isLoggin");
   useEffect(() => {
-    const login = localStorage.getItem("isLoggin");
     if (login) {
       const auth = getAuth();
       onAuthStateChanged(auth, (user) => {
@@ -19,7 +19,7 @@ function App() {
         }
       });
     }
-  }, []);
+  }, [login]);
   return (
     <div className="App">
       <Routers />
