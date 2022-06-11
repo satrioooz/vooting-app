@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect } from "react";
+import "./App.css";
+import Register from "./page/Register";
+import Routers from "./Router/Routers";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useContext, useState } from "react";
+import { AuthContext } from "./Context/AuthContext";
 function App() {
+  const { auth } = useContext(AuthContext);
+  useEffect(() => {
+    const login = localStorage.getItem("isLoggin");
+    if (login) {
+      const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          console.log(user);
+          const uid = user.uid;
+        } else {
+        }
+      });
+    }
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routers />
     </div>
   );
 }

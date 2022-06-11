@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 1,
+        "name": "FC Barcelona",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages4.alphacoders.com%2F969%2F969514.jpg&f=1&nofb=1",
+        "votes":0
+    },
+    {
+        "_id": 2,
+        "name": "Juventus F.C.",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwallpapercave.com%2Fwp%2F5cfRNtG.jpg&f=1&nofb=1",
+        "votes":0
+    },
+    {
+        "_id": 3,
+        "name": "Manchester United F.C.",
+        "logo": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.mgnvit6t3KtlZlgO40R-IQHaEo%26pid%3DApi&f=1",
+        "votes":0
+    }
+]
