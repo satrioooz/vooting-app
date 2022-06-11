@@ -9,7 +9,7 @@ const CardItems = () => {
   const [data, setData] = useState(Data);
 
   useEffect(() => {
-    // const json = localStorage.setItem("items", JSON.stringify(Data));
+    const json = localStorage.setItem("data", JSON.stringify(Data));
 
     const localData = JSON.parse(localStorage.getItem("data") || "items");
     setData(localData);
